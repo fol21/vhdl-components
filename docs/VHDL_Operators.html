@@ -1,0 +1,171 @@
+
+<!-- saved from url=(0056)https://www.csee.umbc.edu/portal/help/VHDL/operator.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VHDL Operators</title>
+<style type="text/css">.backpack.dropzone {
+  font-family: 'SF UI Display', 'Segoe UI';
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  font-weight: lighter;
+  color: white;
+  will-change: right;
+  z-index: 2147483647;
+  bottom: 20%;
+  background: #333;
+  position: fixed;
+  user-select: none;
+  transition: left .5s, right .5s;
+  right: 0px; }
+  .backpack.dropzone .animation {
+    height: 80px;
+    width: 250px;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style></head>
+<body>
+
+
+<p>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/summary.html">Summary</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/design.html">Design Units</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/sequential.html">Sequential Statements</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/concurrent.html">Concurrent Statements</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/types.html">Predefined Types</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/declare.html">Declarations</a>
+|
+</p>
+<p>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/misc.html">Resolution and Signatures</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/reserved.html">Reserved Words</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/operator.html">Operators</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/attribute.html">Predefined Attributes</a>
+|<a href="https://www.csee.umbc.edu/portal/help/VHDL/stdpkg.html">Standard Packages</a>
+|
+</p>
+
+
+<a name="Top"></a>
+
+<h2> VHDL Operators </h2>
+<h3><pre>   Highest precedence first,
+   left to right within same precedence group,
+   use parenthesis to control order.
+   Unary operators take an operand on the right.
+   "result same" means the result is the same as the right operand.
+   Binary operators take an operand on the left and right.
+   "result same" means the result is the same as the left operand.
+</pre></h3>
+
+<pre><b>**  </b> exponentiation,  numeric <b>**</b> integer,  result numeric
+<b>abs </b> absolute value,  <b>abs</b> numeric,  result numeric
+<b>not </b> complement,      <b>not</b> logic or boolean,  result same
+
+<b>*   </b> multiplication,  numeric <b>*</b> numeric,  result numeric
+<b>/   </b> division,        numeric <b>/</b> numeric,  result numeric
+<b>mod </b> modulo,          integer <b>mod</b> integer,  result integer
+<b>rem </b> remainder,       integer <b>rem</b> integer,  result integer
+
+<b>+   </b> unary plus,      <b>+</b> numeric,  result numeric
+<b>-   </b> unary minus,     <b>-</b> numeric,  result numeric
+
+<b>+   </b> addition,        numeric <b>+</b> numeric,  result numeric
+<b>-   </b> subtraction,     numeric <b>-</b> numeric,  result numeric
+<b>&amp;   </b> concatenation,   array or element <b>&amp;</b> array or element,
+                        result array
+
+<b>sll </b> shift left logical,     logical array <b>sll</b> integer,  result same
+<b>srl </b> shift right logical,    logical array <b>srl</b> integer,  result same
+<b>sla </b> shift left arithmetic,  logical array <b>sla</b> integer,  result same
+<b>sra </b> shift right arithmetic, logical array <b>sra</b> integer,  result same
+<b>rol </b> rotate left,            logical array <b>rol</b> integer,  result same
+<b>ror </b> rotate right,           logical array <b>ror</b> integer,  result same
+
+<b>=   </b> test for equality, result is boolean
+<b>/=  </b> test for inequality, result is boolean
+<b>&lt;   </b> test for less than, result is boolean
+<b>&lt;=  </b> test for less than or equal, result is boolean
+<b>&gt;   </b> test for greater than, result is boolean
+<b>&gt;=  </b> test for greater than or equal, result is boolean
+
+<b>and </b> logical and,                logical array or boolean,  result is same
+<b>or  </b> logical or,                 logical array or boolean,  result is same
+<b>nand</b> logical complement of and,  logical array or boolean,  result is same
+<b>nor </b> logical complement of or,   logical array or boolean,  result is same
+<b>xor </b> logical exclusive or,       logical array or boolean,  result is same
+<b>xnor</b> logical complement of exclusive or,  logical array or boolean,  result is same
+
+</pre>
+
+
+
+
+
+<h3><a name="Other"> Other Links </a></h3>
+<ul>
+  <li> <a href="https://www.csee.umbc.edu/portal/help/VHDL/index.shtml">
+       VHDL help page
+       </a>
+  </li><li> <a href="http://www.csee.umbc.edu/help/VHDL/samples/samples.shtml">
+       Lots of sample VHDL code, from very simple, through I/O, to complex
+       </a>
+  </li><li> <a href="http://tech-www.informatik.uni-hamburg.de/vhdl">
+       Hamburg VHDL Archive (the best set of links I have seen!)
+       </a>
+  </li><li> <a href="http://rassp.scra.org/vhdl/tools/tools.html">
+       RASSP Project VHDL Tools
+       </a>
+  </li><li> <a href="http://www.vhdl.org/">
+       VHDL Organization Home Page
+       </a>
+  </li><li> <a href="http://www.freehdl.seul.org/">
+       gnu GPL VHDL for Linux, under development
+       </a>
+  </li><li> <a href="http://www.ftlsys.com/">
+       More information on Exploration/VHDL from FTL Systems.
+       </a>
+</li></ul>
+
+<h4><a href="https://www.csee.umbc.edu/portal/help/VHDL/operator.html#Top"> Go to top </a></h4>
+<h4><a href="https://www.csee.umbc.edu/portal/help/VHDL/index.shtml"> Go to VHDL index </a></h4>
+
+
+
+
+<span style="border-radius: 3px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 11px; line-height: 20px; font-family: &quot;Helvetica Neue&quot;, Helvetica, sans-serif; color: rgb(255, 255, 255); background: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) 3px 50% / 14px 14px no-repeat rgb(189, 8, 28); position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; -webkit-font-smoothing: antialiased;">Salvar</span><span style="width: 24px; height: 24px; background: url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) 50% 50% / 14px 14px no-repeat rgba(0, 0, 0, 0.4); position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; border-radius: 12px;"></span></body></html>
