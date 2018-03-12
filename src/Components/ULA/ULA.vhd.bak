@@ -108,7 +108,7 @@ architecture arch of ULA_Unity is
 			) ;
 	end component;
 
-	component ULA_Adder_Full_Unity
+	component ULA_Full_Adder_Unity
 		PORT(AS,BS, DIN4S, CIS : IN BIT;
 			 SS,COS : OUT BIT
 			);

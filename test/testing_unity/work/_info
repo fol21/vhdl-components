@@ -1,0 +1,476 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/fol/Documents/comp_dig1/MULTIPLIER
+Eadder
+Z0 w1519051007
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Projetos/vhdl-components/test/testing_unity
+Z6 8C:/Projetos/vhdl-components/src/combinational/Adder.vhd
+Z7 FC:/Projetos/vhdl-components/src/combinational/Adder.vhd
+l0
+L84
+VW?XRKWMBDOg>i1B?<9hOB1
+!s100 mR?A@j0ZD?LN@D<Z1NfPh2
+Z8 OP;C;10.4a;61
+32
+Z9 !s110 1519051731
+!i10b 1
+Z10 !s108 1519051731.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Projetos/vhdl-components/src/combinational/Adder.vhd|
+Z12 !s107 C:/Projetos/vhdl-components/src/combinational/Adder.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 5 adder 0 22 W?XRKWMBDOg>i1B?<9hOB1
+l99
+L95
+V9@jeH::6PHoaKIS0H]n:n1
+!s100 :[S@1_h[jhnaSMLJC2i3_2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eadder_3bits
+R0
+R5
+R6
+R7
+l0
+L42
+VGLoP^O2XO5zFMAgglR]2<1
+!s100 X1Ui[`>;@Kj@lz<=A<Smj1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 11 adder_3bits 0 22 GLoP^O2XO5zFMAgglR]2<1
+l67
+L50
+VI@z=ZJNMgb24aM>f=BCGC2
+!s100 MlNmW:P6C01P[T?hOFVL`3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eadder_full_unity
+R0
+R5
+R6
+R7
+l0
+L18
+VCWDYE=@eoF=6BY`aZ?9Vo3
+!s100 @MkNnF]e;L<;;O4SZ9Cb21
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 16 adder_full_unity 0 22 CWDYE=@eoF=6BY`aZ?9Vo3
+l33
+L25
+Vo_QGiae01kOmZ]V;fIf351
+!s100 Z1bH>KYQOR`g`X@g<WibY2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Eadder_half_unity
+R0
+R5
+R6
+R7
+l0
+L4
+V2UP3TO>_a2GL[AkmS:GWP1
+!s100 N9ohfLIKeC8]dOTBBT5_90
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 16 adder_half_unity 0 22 2UP3TO>_a2GL[AkmS:GWP1
+l11
+L10
+VOeZfaSPAdXfB6YhKeD^Q23
+!s100 NP7P`<<]bWHRe]@]Y^YM60
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ecounter
+w1519004955
+R5
+Z15 8C:/Projetos/vhdl-components/src/sequential/Counter.vhd
+Z16 FC:/Projetos/vhdl-components/src/sequential/Counter.vhd
+l0
+L35
+VDEYAQ1DlzUV4eXF][3Lo50
+!s100 JK`P`a@Y5fKeajGlTa`3n1
+R8
+32
+!s110 1519050305
+!i10b 1
+!s108 1519050305.000000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Projetos/vhdl-components/src/sequential/Counter.vhd|
+Z18 !s107 C:/Projetos/vhdl-components/src/sequential/Counter.vhd|
+!i113 1
+R13
+R14
+Ecounter_4bit
+Z19 w1519050334
+R5
+R15
+R16
+l0
+L3
+V`6D5[03OSYLF7elIV0ghi0
+!s100 ZZLmE=3UoAmSgnDlnEG^n0
+R8
+32
+Z20 !s110 1519051732
+!i10b 1
+Z21 !s108 1519051732.000000
+R17
+R18
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 12 counter_4bit 0 22 `6D5[03OSYLF7elIV0ghi0
+l17
+L9
+VjlU8@fA7NV[HF8PVMModo2
+!s100 `HB8c_BLHTO:DK;j1Ab4A0
+R8
+32
+R20
+!i10b 1
+R21
+R17
+R18
+!i113 1
+R13
+R14
+Eff_d
+Z22 w1519050282
+R5
+Z23 8C:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd
+Z24 FC:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd
+l0
+L4
+V^Xgg8a5h]Je1N`R]P2`NA1
+!s100 nJUo99lLkAQiSTEmCH9QN2
+R8
+32
+R9
+!i10b 1
+R10
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd|
+Z26 !s107 C:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd|
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 4 ff_d 0 22 ^Xgg8a5h]Je1N`R]P2`NA1
+l10
+L9
+V_dGV_lBC77_ed5MNPdeYm0
+!s100 0bMfB7EM>ga?gcF35M;>S2
+R8
+32
+R9
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Eff_jk
+R22
+R5
+R23
+R24
+l0
+L17
+VnX;>Q6UFm3CQfze?:0j`S2
+!s100 9QDd8_T8Y3aUGL8:^Mgg?3
+R8
+32
+R9
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Aarch
+DEx4 work 5 ff_jk 0 22 nX;>Q6UFm3CQfze?:0j`S2
+l24
+L22
+VQbdGW0PUAGJ:5KTCT<AVa2
+!s100 T;oId0Y=oVbJf;5UW=^3R3
+R8
+32
+R9
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Eula
+w1519049893
+R5
+Z27 8C:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd
+Z28 FC:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd
+l0
+L131
+VP0KJIYf?14oU5Z2AzdnSH3
+!s100 :OadQ45566S1oaa;8]VRC0
+R8
+32
+!s110 1519050025
+!i10b 1
+!s108 1519050025.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd|
+Z30 !s107 C:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd|
+!i113 1
+R13
+R14
+Eula_adder_full_unity
+Z31 w1519050236
+R5
+R27
+R28
+l0
+L62
+VNJIHm7bP5Lch9z<JlH_o?2
+!s100 kd`kZJe_@4SN8Z8R3EhoK2
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Aarch
+Z32 DEx4 work 20 ula_adder_full_unity 0 22 NJIHm7bP5Lch9z<JlH_o?2
+l77
+L69
+Z33 VQYUHCJ_KEb?Y4`o0C7Y021
+Z34 !s100 XdY1XP>AFcCb94UnfAfDU1
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Eula_adder_half_unity
+R31
+R5
+R27
+R28
+l0
+L47
+Ve[:Sa_3=1bO<H25WOF1`J1
+!s100 `7GcVJTHbgNELkoQei>QC2
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Aarch
+Z35 DEx4 work 20 ula_adder_half_unity 0 22 e[:Sa_3=1bO<H25WOF1`J1
+l55
+L53
+Z36 Vh1<HMWMIi_3[PcO<C6lkj0
+Z37 !s100 i>FYSdV0bhzUgeeJj4e>40
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Eula_decoder
+R31
+R5
+R27
+R28
+l0
+L3
+Vn;lYzA[:KFO]:Yg]OaUP33
+!s100 Rn]7RjSa6ia=1j4zRA8OO3
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Aarch
+Z38 DEx4 work 11 ula_decoder 0 22 n;lYzA[:KFO]:Yg]OaUP33
+l12
+L10
+Z39 VW=VlZIF8^TN8h^Dn]a8cA1
+Z40 !s100 cIkB09J9[MO;R;UYE<:CC2
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Eula_logic_unity
+R31
+R5
+R27
+R28
+l0
+L22
+VD_DfN;:Sog@RH[flMCVIa1
+!s100 ^c_S@ac2M2>JgD8=TnEG>1
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Aarch
+Z41 DEx4 work 15 ula_logic_unity 0 22 D_DfN;:Sog@RH[flMCVIa1
+l33
+L29
+Z42 Vajh@3L1i5d@NBDF<HZ0OU1
+Z43 !s100 n6oPZm4ZG<Gld_eo@dHe20
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Eula_unity
+R31
+R5
+R27
+R28
+l0
+L87
+Vko>PWM@gizmzBb;e1anWR2
+!s100 F<Jh:l79[82CI;_:_::mM2
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14
+Aarch
+Z44 DEx4 work 9 ula_unity 0 22 ko>PWM@gizmzBb;e1anWR2
+l120
+L94
+Z45 V7OM]_o`:d=jBE]<8EQa^l3
+Z46 !s100 mR_L?TH=UKAeoCU9O1b9;2
+R8
+32
+R20
+!i10b 1
+R21
+R29
+R30
+!i113 1
+R13
+R14

@@ -94,7 +94,7 @@ end Adder;
 
 architecture arch of Adder is
 
-signal result: std_logic_vector(n downto 0);
+signal result: bit_vector(n downto 0);
  
 begin					  
     result <= ('0' & A)+('0' & B);

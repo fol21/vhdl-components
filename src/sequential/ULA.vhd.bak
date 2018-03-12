@@ -86,8 +86,8 @@ END arch;
 
 entity ULA_Unity is
   port (
-	XS,YS,F0S,F1S,CIS : in bit;
-	COS,RS : out bit
+	X,Y,F0,F1,CI : in bit;
+	CO,R : out bit
   );
 end ULA_Unity;
 
@@ -96,21 +96,21 @@ architecture arch of ULA_Unity is
 
 	component ULA_Decoder
 		port (
-				F0S,F1S: in bit;
-				S0S,S1S,S2S,S3S: in bit
+				F0,F1: in bit;
+				S0,S1,S2,S3: in bit
 			);
 	end component;
 
 	component ULA_Logic_Unity
 		port (
-				XS, YS, DIN1S, DIN2S, DIN3S: in bit;
-				S1S, S2S, S3S : out bit
+				X, Y, DIN1, DIN2, DIN3: in bit;
+				S1, S2, S3 : out bit
 			) ;
 	end component;
 
-	component ULA_Adder_Full_Unity
-		PORT(AS,BS, DIN4S, CIS : IN BIT;
-			 SS,COS : OUT BIT
+	component ULA_Full_Adder_Unity
+		PORT(A,B, DIN4, CI : IN BIT;
+			 S,CO : OUT BIT
 			);
 	end component;
 	
@@ -119,10 +119,54 @@ architecture arch of ULA_Unity is
 
 	begin
 
-		u_decoder : ULA_Decoder port map(F0,F1,dout1,dout2,dout3,dout4);
-		u_logic : ULA_Logic_Unity port map(X,Y,dout1,dout2,dout3,aux1,aux2,aux3);
-		u_adder : ULA_Adder_Full_Unity port map(X,Y,dout4,CI,aux4,CO);
+		decoder : ULA_Decoder port map(F0,F1,dout1,dout2,dout3,dout4);
+		logic : ULA_Logic_Unity port map(X,Y,dout1,dout2,dout3,aux1,aux2,aux3);
+		adder : ULA_Full_Adder_Unity port map(X,Y,dout4,CI,aux4,CO);
 		R <= aux1 or aux2 or aux3 or aux4;
 
 	end arch ; -- arch
+
+----------- Generic ULA ------------------
+
+entity ULA is
+port (	num_A: 	in bit_vector(15 downto 0);
+		num_B: 	in bit_vector(15 downto 0);
+		jpsign:	in bit;
+		ULAs:	in bit_vector(1 downto 0);
+		ULAz:	out bit;
+		ULAout:	out bit_vector(15 downto 0)
+);
+end ULA;
+
+architecture behv of ULA is
+
+signal ULA_tmp: bit_vector(15 downto 0);
+
+begin
+
+	process(num_A, num_B, ULAs)
+	begin			
+		case ULAs is
+		  when "00" => ULA_tmp <= num_A;
+		  when "01" => ULA_tmp <= num_B;
+		  when "10" => ULA_tmp <= num_A + num_B;
+		  when "11" => ULA_tmp <= num_A - num_B;
+		  when others =>
+	    end case; 					  
+	end process;
+	
+	process(jpsign, ULA_tmp)
+	begin
+		if (jpsign = '1' and ULA_tmp = ZERO) then
+			ULAz <= '1';
+		else
+			ULAz <= '0';
+		end if;
+	end process;					
+	
+	ULAout <= ULA_tmp;
+	
+end behv;
+
+
 

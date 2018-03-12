@@ -29,3 +29,36 @@ Architecture arch of Counter_4bit is
 
 
 
+----------- Generic Counter ----------------
+
+
+entity Counter is
+
+generic(n: natural :=2);
+port(	
+    clk:	in bit;
+	clear:	in bit;
+	count:	in bit;
+	Q:	out bit_vector(n-1 downto 0)
+);
+end Counter;
+architecture arch of Counter is		 	  
+	
+    signal aux: bit_vector(n-1 downto 0);
+
+begin
+
+    process(clk, count, clear)
+        begin
+        if clear = '1' then
+            aux <= aux - aux;
+        elsif (clk='1' and clk'event) then
+            if count = '1' then
+            aux <= aux + 1;
+            end if;
+        end if;
+    end process;	
+
+    Q <= aux;
+
+end arch;

@@ -22,7 +22,7 @@ end FF_JK;
 Architecture arch of FF_JK is
 	signal aux:bit;
 	Begin
-		aux <= aux when (clk'Event) and (clk='1') and (J='0') and (K='0') else
+		aux <= aux when (clk'Event) and (clk='1') a nd (J='0') and (K='0') else
 		       '0' when (clk'Event) and (clk='1') and (J='0') and (K='1') else
 		       '1' when (clk'Event) and (clk='1') and (J='1') and (K='0') else
 		       not aux when (clk'Event) and (clk='1') and (J='1') and (K='1');

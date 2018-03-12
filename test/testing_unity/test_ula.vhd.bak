@@ -1,0 +1,41 @@
+entity ULA_Unity is
+  port (
+	X,Y,F0,F1,CI : in bit;
+	CO,R : out bit
+  );
+end ULA_Unity;
+
+architecture arch of ULA_Unity is
+
+
+	component ULA_Decoder
+		port (
+				F0,F1: in bit;
+				S0,S1,S2,S3: in bit
+			);
+	end component;
+
+	component ULA_Logic_Unity
+		port (
+				X, Y, DIN1, DIN2, DIN3: in bit;
+				S1, S2, S3 : out bit
+			) ;
+	end component;
+
+	component ULA_Full_Adder_Unity
+		PORT(A,B, DIN4, CI : IN BIT;
+			 S,CO : OUT BIT
+			);
+	end component;
+	
+	signal aux1,aux2,aux3,aux4 : bit;
+	signal dout1,dout2,dout3,dout4 : bit;
+
+	begin
+
+		decoder : ULA_Decoder port map(F0,F1,dout1,dout2,dout3,dout4);
+		logic : ULA_Logic_Unity port map(X,Y,dout1,dout2,dout3,aux1,aux2,aux3);
+		adder : ULA_Full_Adder_Unity port map(X,Y,dout4,CI,aux4,CO);
+		R <= aux1 or aux2 or aux3 or aux4;
+
+	end arch ; -- arch

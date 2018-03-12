@@ -1,0 +1,45 @@
+C:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Projetos/vhdl-components/src/Components/ULA/ULA.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity ULA_Decoder
+-- Compiling architecture arch of ULA_Decoder
+-- Compiling entity ULA_Logic_Unity
+-- Compiling architecture arch of ULA_Logic_Unity
+-- Compiling entity ULA_Adder_Half_Unity
+-- Compiling architecture arch of ULA_Adder_Half_Unity
+-- Compiling entity ULA_Adder_Full_Unity
+-- Compiling architecture arch of ULA_Adder_Full_Unity
+-- Compiling entity ULA_Unity
+-- Compiling architecture arch of ULA_Unity
+
+} {} {}} C:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Projetos/vhdl-components/src/sequential/Flip_Flop.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity FF_D
+-- Compiling architecture arch of FF_D
+-- Compiling entity FF_JK
+-- Compiling architecture arch of FF_JK
+
+} {} {}} C:/Projetos/vhdl-components/src/sequential/Counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Projetos/vhdl-components/src/sequential/Counter.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity Counter_4bit
+-- Compiling architecture arch of Counter_4bit
+
+} {} {}} C:/Projetos/vhdl-components/src/combinational/Adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Projetos/vhdl-components/src/combinational/Adder.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity Adder_Half_Unity
+-- Compiling architecture arch of Adder_Half_Unity
+-- Compiling entity Adder_Full_Unity
+-- Compiling architecture arch of Adder_Full_Unity
+-- Compiling entity Adder_3bits
+-- Compiling architecture ARCH of Adder_3bits
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Adder
+-- Compiling architecture arch of Adder
+
+} {} {}}
