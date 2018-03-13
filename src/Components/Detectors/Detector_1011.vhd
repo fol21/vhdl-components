@@ -1,99 +1,44 @@
-entity Detector_1011 is
-  port (
-    x, clock : in bit;
-    z : out bit
-  ) ;
-end Detector_1011 ;
+entity Detector_1011 IS
+    PORT (X, CLK: IN BIT;
+          Z: OUT BIT);
+end Detector_1011; 
 
-architecture arch of Detector_1011 is
-type state is (reset, tem1, tem10, tem101);
-signal atual : state := reset;
-
-begin
-  Transition : process( clock )
-  begin
-    if (clock'Event) and (clock = '1') then
-      case( atual ) is
-      
-        when reset =>
-          Z <= '0'; 
-          if x = '1'  then atual <= tem1;
-          else atual <= reset;
-          end if ;
-        
-        when tem1 => 
-          Z <= '0';
-          if x = '0'  then atual <= tem10;
-          else atual <= tem1;
-          end if ;
-        
-        when tem10 =>
-          Z <= '0'; 
-          if x = '1'  then atual <= tem101;
-          else atual <= reset;
-          end if ;
-        
-        when tem101 => 
-          Z <= '0';
-          if x = '1'  then Z <= '1'; atual <= tem1;
-          else Z <= '0'; atual <= tem10;
-          end if ;
-       
-      end case ;
-    end if;
-  end process ; -- Transition
-end architecture ; -- arch
-
------------ Alternante ---------------
-
-entity Detector_1011 is
-  port (
-    x, clock : in bit;
-    z : out bit
-  ) ;
-end Detector_1011 ;
-
-architecture arch of Detector_1011 is
-type state is (reset, tem1, tem10, tem101, tem1011);
-signal atual : state := reset;
-
-begin
-  Transition : process( clock )
-  begin
-    if (clock'Event) and (clock = '1') then
-      case( atual ) is
-      
-        when reset =>
-          Z <= '0'; 
-          if x = '1'  then atual <= tem1;
-          else atual <= reset;
-          end if ;
-        
-        when tem1 => 
-          Z <= '0';
-          if x = '0'  then atual <= tem10;
-          else atual <= tem1;
-          end if ;
-        
-        when tem10 =>
-          Z <= '0'; 
-          if x = '1'  then atual <= tem101;
-          else atual <= reset;
-          end if ;
-        
-        when tem101 => 
-          Z <= '0';
-          if x = '1'  then atual <= tem1011;
-          else atual <= tem10;
-          end if ;
-        when tem1011 => 
-          Z <= '1';
-          if x = '1'  then atual <= tem1;
-          else Z <= '0'; atual <= tem10;
-          end if ;
-      end case ;
-    end if;
-  end process ; -- Transition
-end architecture ; -- arch
-
-
+architecture arch OF Detector_1011 is
+    TYPE ESTADO IS (RESET, TEM1, TEM10, TEM101, TEM1011);
+    SIGNAL ATUAL: ESTADO := RESET;
+    
+  BEGIN
+    
+    output: PROCESS(ATUAL)
+    BEGIN
+        IF ATUAL = TEM1011 THEN Z <= '1';
+        ELSE Z <= '0'; 
+        END IF;   
+    END PROCESS;
+    
+    transition: PROCESS(CLK)
+    BEGIN
+        IF (CLK'EVENT) AND (CLK = '1') THEN
+          CASE ATUAL IS
+            WHEN RESET   => IF X = '1' THEN ATUAL <= TEM1;
+                            ELSE ATUAL <= RESET;
+                            END IF;
+            
+            WHEN TEM1    => IF X = '0' THEN ATUAL <= TEM10;
+                            ELSE ATUAL <= TEM1;
+                            END IF;
+                          
+            WHEN TEM10   => IF X = '1' THEN ATUAL <= TEM101;
+                            ELSE ATUAL <= RESET;
+                            END IF;
+                        
+            WHEN TEM101  => IF X = '1' THEN ATUAL <= TEM1011;
+                            ELSE ATUAL <= TEM10;
+                            END IF;
+            WHEN TEM1011 => IF X = '0' THEN ATUAL <= TEM10;
+                            ELSE ATUAL <= TEM1;
+                            END IF;   
+         END CASE;
+       END IF;
+    END PROCESS;
+END arch;
